@@ -1,0 +1,18 @@
+Source: zlib-djgpp
+Section: devel
+Priority: optional
+Maintainer: jwt27 <jwjagersma@gmail.com>
+Build-Depends:
+ debhelper (>= 11),
+ gcc-djgpp,
+ binutils-djgpp,
+ djgpp-dev,
+ djgpp-utils
+Standards-Version: 4.6.1
+
+Package: zlib-djgpp-dev
+Architecture: any
+Section: devel
+Depends: ${misc:Depends}
+Recommends: gcc-djgpp, binutils-djgpp
+Description: ZLib compression library for djgpp

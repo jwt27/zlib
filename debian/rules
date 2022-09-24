@@ -1,0 +1,34 @@
+#!/usr/bin/make -f
+
+HOST   := i386-pc-msdosdjgpp
+CFLAGS := -O2 -g -march=i386 -mtune=pentium-mmx
+CFLAGS += -ffunction-sections -fdata-sections
+export CFLAGS
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	-git clean -fX
+	-make distclean
+	-rm -f *.exe debian/pgp-secret.asc
+
+override_dh_auto_configure:
+	CHOST=$(HOST) ./configure --prefix=/usr/$(HOST)
+
+override_dh_auto_test:
+	# skip
+
+override_dh_installdocs:
+	dh_installdocs
+	dh_installdocs README FAQ doc/*
+
+override_dh_installexamples:
+	dh_installexamples
+	dh_installexamples examples/*
+
+override_dh_installchangelogs:
+	dh_installchangelogs ChangeLog
+
+override_dh_strip:
+	dh_strip --exclude=.a

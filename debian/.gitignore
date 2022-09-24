@@ -1,0 +1,6 @@
+zlib*/
+tmp/
+files
+debhelper-build-stamp
+*.log
+*.substvars
