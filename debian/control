@@ -13,6 +13,6 @@ Standards-Version: 4.6.1
 Package: zlib-djgpp-dev
 Architecture: any
 Section: devel
-Depends: ${misc:Depends}
-Recommends: gcc-djgpp, binutils-djgpp
+Depends: ${misc:Depends}, libc-djgpp-dev
+Recommends: gcc-djgpp, binutils-djgpp, djgpp-utils
 Description: ZLib compression library for djgpp
