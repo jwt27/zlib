@@ -1,9 +1,10 @@
 #!/usr/bin/make -f
 
-HOST   := i386-pc-msdosdjgpp
-CFLAGS := -O2 -g -march=i386 -mtune=pentium-mmx
-CFLAGS += -ffunction-sections -fdata-sections
-export CFLAGS
+HOST    := i386-pc-msdosdjgpp
+CFLAGS  := -O2 -g -march=i386 -mtune=pentium-mmx
+CFLAGS  += -ffunction-sections -fdata-sections
+LDFLAGS :=
+export CFLAGS LDFLAGS
 
 %:
 	dh $@
