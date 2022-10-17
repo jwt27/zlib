@@ -1,3 +1,9 @@
+zlib-djgpp (1.2.13+0) unstable; urgency=medium
+
+  * zlib version 1.2.13
+
+ -- jwt27 <jwjagersma@gmail.com>  Mon, 17 Oct 2022 18:06:00 +0200
+
 zlib-djgpp (1.2.12+2) unstable; urgency=medium
 
   * Initial release, zlib version 1.2.12
